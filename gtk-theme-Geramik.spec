@@ -5,9 +5,9 @@ Summary:	GTK theme similar to the Keramik KDE style
 Summary(pl):	Motyw dla GTK podobny do stylu Keramik dla KDE
 Name:		gtk-theme-%{_theme}
 Version:	0.24
-Release:	1
+Release:	2
 License:	GPL v2
-Group:		Themes/Gtk
+Group:		Themes/GTK+
 Source0:	http://www.kde-look.org/content/files/3952-%{_theme}-%{version}.tar.gz
 # Source0-md5:	f632116374c07a6f1e566442f6705533
 BuildRequires:	gtk+
@@ -26,7 +26,7 @@ do stylu Keramik dla KDE.
 %package common
 Summary:	Geramik GTK theme - common files
 Summary(pl):	Motyw dla GTK - Geramik - pliki wspólne
-Group:		Themes/Gtk
+Group:		Themes/GTK+
 
 %description common
 GTK theme intended to make GTK applications have a similar look to the
@@ -43,7 +43,7 @@ Ten pakiet zawiera pliki wspólne dla gtk+ i gtk+2.
 %package gtk1
 Summary:	GTK theme similar to the Keramik KDE style
 Summary(pl):	Motyw dla GTK podobny do stylu Keramik dla KDE
-Group:		Themes/Gtk
+Group:		Themes/GTK+
 Requires:	%{name}-common
 Requires:	gtk+
 
@@ -62,7 +62,7 @@ Ten pakiet zawiera motyw dla aplikacji opartych na gtk+.
 %package gtk2
 Summary:	GTK theme similar to the Keramik KDE style
 Summary(pl):	Motyw dla GTK podobny do stylu Keramik dla KDE
-Group:		Themes/Gtk
+Group:		Themes/GTK+
 Requires:	%{name}-common
 Requires:	gtk+2
 
@@ -87,7 +87,8 @@ Ten pakiet zawiera motyw dla aplikacji opartych na gtk+2.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
