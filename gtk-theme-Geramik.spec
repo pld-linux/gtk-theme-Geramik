@@ -1,8 +1,8 @@
 
 %define		_theme		Geramik
 
-Summary:	GTK theme similar to the Keramik KDE style
-Summary(pl):	Motyw dla GTK podobny do stylu Keramik dla KDE
+Summary:	GTK+ theme similar to the Keramik KDE style
+Summary(pl):	Motyw dla GTK+ podobny do stylu Keramik dla KDE
 Name:		gtk-theme-%{_theme}
 Version:	0.24
 Release:	2
@@ -16,12 +16,12 @@ BuildRequires:	imlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-GTK theme intended to make GTK applications have a similar look to the
-Keramik KDE style.
+GTK+ theme intended to make GTK+ applications have a similar look to
+the Keramik KDE style.
 
 %description -l pl
-Motyw dla GTK, maj±cy na celu nadanie aplikacjom GTK wygl±du podobnego
-do stylu Keramik dla KDE.
+Motyw dla GTK+, maj±cy na celu nadanie aplikacjom GTK+ wygl±du
+podobnego do stylu Keramik dla KDE.
 
 %package common
 Summary:	Geramik GTK theme - common files
