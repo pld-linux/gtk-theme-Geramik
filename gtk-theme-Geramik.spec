@@ -9,6 +9,7 @@ Release:	1
 License:	GPL v2
 Group:		Themes/Gtk
 Source0:	http://www.kde-look.org/content/files/3952-%{_theme}-%{version}.tar.gz
+# Source0-md5:	f632116374c07a6f1e566442f6705533
 BuildRequires:	gtk+
 BuildRequires:	gtk+2
 BuildRequires:	imlib-devel
