@@ -32,13 +32,13 @@ Group:		Themes/GTK+
 GTK theme intended to make GTK applications have a similar look to the
 Keramik KDE style.
 
-This package contains common files for gtk+ and gtk+2.
+This package contains common files for GTK+ and GTK+2.
 
 %description common -l pl
 Motyw dla GTK, maj±cy na celu nadanie aplikacjom GTK wygl±du podobnego
 do stylu Keramik dla KDE.
 
-Ten pakiet zawiera pliki wspólne dla gtk+ i gtk+2.
+Ten pakiet zawiera pliki wspólne dla GTK+ i GTK+2.
 
 %package gtk1
 Summary:	GTK theme similar to the Keramik KDE style
@@ -51,13 +51,13 @@ Requires:	gtk+
 GTK theme intended to make GTK applications have a similar look to the
 Keramik KDE style.
 
-This package contains theme for applications based on gtk+.
+This package contains theme for applications based on GTK+.
 
 %description gtk1 -l pl
 Motyw dla GTK, maj±cy na celu nadanie aplikacjom GTK wygl±du podobnego
 do stylu Keramik dla KDE.
 
-Ten pakiet zawiera motyw dla aplikacji opartych na gtk+.
+Ten pakiet zawiera motyw dla aplikacji opartych na GTK+.
 
 %package gtk2
 Summary:	GTK theme similar to the Keramik KDE style
@@ -70,13 +70,13 @@ Requires:	gtk+2
 GTK theme intended to make GTK applications have a similar look to the
 Keramik KDE style.
 
-This package contains theme for applications based on gtk+2.
+This package contains theme for applications based on GTK+2.
 
 %description gtk2 -l pl
 Motyw dla GTK, maj±cy na celu nadanie aplikacjom GTK wygl±du podobnego
 do stylu Keramik dla KDE.
 
-Ten pakiet zawiera motyw dla aplikacji opartych na gtk+2.
+Ten pakiet zawiera motyw dla aplikacji opartych na GTK+2.
 
 %prep
 %setup -q -n %{_theme}-%{version}
