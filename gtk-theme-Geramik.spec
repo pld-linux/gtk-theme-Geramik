@@ -4,7 +4,7 @@
 Summary:	GTK theme similar to the Keramik KDE style
 Summary(pl):	Motyw dla GTK podobny do stylu Keramik dla KDE
 Name:		gtk-theme-%{_theme}
-Version:	0.18
+Version:	0.24
 Release:	1
 License:	GPL v2
 Group:		Themes/Gtk
