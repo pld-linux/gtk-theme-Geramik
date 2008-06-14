@@ -10,6 +10,7 @@ License:	GPL v2
 Group:		Themes/GTK+
 Source0:	http://www.kde-look.org/content/files/3952-%{_theme}-%{version}.tar.gz
 # Source0-md5:	f632116374c07a6f1e566442f6705533
+Patch0:		%{name}-comment.patch
 BuildRequires:	gtk+
 BuildRequires:	gtk+2
 BuildRequires:	imlib-devel
@@ -80,6 +81,7 @@ Ten pakiet zawiera motyw dla aplikacji opartych na GTK+2.
 
 %prep
 %setup -q -n %{_theme}-%{version}
+%patch0 -p1
 
 %build
 %configure
@@ -107,6 +109,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files gtk2
 %defattr(644,root,root,755)
-%{_libdir}/gtk-2.0/2.2.0/engines/*.la
-%attr(755,root,root) %{_libdir}/gtk-2.0/2.2.0/engines/*.so
+%{_libdir}/gtk-2.0/*/engines/*.la
+%attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
 %{_datadir}/themes/%{_theme}/gtk-2.0
