@@ -1,14 +1,14 @@
 
-%define		_theme		Geramik
+%define		theme		Geramik
 
 Summary:	GTK+ theme similar to the Keramik KDE style
 Summary(pl.UTF-8):	Motyw dla GTK+ podobny do stylu Keramik dla KDE
-Name:		gtk-theme-%{_theme}
+Name:		gtk-theme-%{theme}
 Version:	0.24
 Release:	2
 License:	GPL v2
 Group:		Themes/GTK+
-Source0:	http://www.kde-look.org/content/files/3952-%{_theme}-%{version}.tar.gz
+Source0:	http://www.kde-look.org/content/files/3952-%{theme}-%{version}.tar.gz
 # Source0-md5:	f632116374c07a6f1e566442f6705533
 Patch0:		%{name}-comment.patch
 BuildRequires:	gtk+
@@ -80,7 +80,7 @@ do stylu Keramik dla KDE.
 Ten pakiet zawiera motyw dla aplikacji opartych na GTK+2.
 
 %prep
-%setup -q -n %{_theme}-%{version}
+%setup -q -n %{theme}-%{version}
 %patch0 -p1
 
 %build
@@ -92,23 +92,24 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+rm $RPM_BUILD_ROOT%{_libdir}/gtk/themes/engines/*.la
+rm $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/themes/engines/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files common
 %defattr(644,root,root,755)
 %doc AUTHORS README TODO
-%dir %{_datadir}/themes/%{_theme}
+%dir %{_datadir}/themes/%{theme}
 %{_datadir}/themes/Geramik/README.html
 
 %files gtk1
 %defattr(644,root,root,755)
-%{_libdir}/gtk/themes/engines/*.la
 %attr(755,root,root) %{_libdir}/gtk/themes/engines/*.so
-%{_datadir}/themes/%{_theme}/gtk
+%{_datadir}/themes/%{theme}/gtk
 
 %files gtk2
 %defattr(644,root,root,755)
-%{_libdir}/gtk-2.0/*/engines/*.la
 %attr(755,root,root) %{_libdir}/gtk-2.0/*/engines/*.so
-%{_datadir}/themes/%{_theme}/gtk-2.0
+%{_datadir}/themes/%{theme}/gtk-2.0
