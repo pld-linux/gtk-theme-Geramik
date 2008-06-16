@@ -93,7 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 rm $RPM_BUILD_ROOT%{_libdir}/gtk/themes/engines/*.la
-rm $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/themes/engines/*.la
+rm $RPM_BUILD_ROOT%{_libdir}/gtk-2.0/*/themes/engines/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
