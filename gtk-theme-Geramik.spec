@@ -11,9 +11,10 @@ Group:		Themes/GTK+
 Source0:	http://www.kde-look.org/content/files/3952-%{theme}-%{version}.tar.gz
 # Source0-md5:	f632116374c07a6f1e566442f6705533
 Patch0:		%{name}-comment.patch
-BuildRequires:	gtk+
-BuildRequires:	gtk+2
-BuildRequires:	imlib-devel
+BuildRequires:	gtk+-devel >= 1:1.2.9
+BuildRequires:	gtk+2-devel >= 2.0
+BuildRequires:	imlib-devel >= 1.8.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,8 +46,9 @@ Ten pakiet zawiera pliki wspólne dla GTK+ i GTK+2.
 Summary:	GTK+ theme similar to the Keramik KDE style
 Summary(pl.UTF-8):	Motyw dla GTK+ podobny do stylu Keramik dla KDE
 Group:		Themes/GTK+
-Requires:	%{name}-common
-Requires:	gtk+
+Requires:	%{name}-common = %{version}-%{release}
+Requires:	gtk+ >= 1:1.2.9
+Requires:	imlib >= 1.8.0
 
 %description gtk1
 GTK+ theme intended to make GTK+ applications have a similar look to the
@@ -64,8 +66,7 @@ Ten pakiet zawiera motyw dla aplikacji opartych na GTK+.
 Summary:	GTK+ theme similar to the Keramik KDE style
 Summary(pl.UTF-8):	Motyw dla GTK+ podobny do stylu Keramik dla KDE
 Group:		Themes/GTK+
-Requires:	%{name}-common
-Requires:	gtk+2
+Requires:	%{name}-common = %{version}-%{release}
 
 %description gtk2
 GTK+ theme intended to make GTK+ applications have a similar look to the
